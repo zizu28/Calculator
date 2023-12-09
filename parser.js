@@ -94,7 +94,8 @@ let operatorList = {
   
           nodes.push(new Node(match[0]))
           expr = expr.replace(/^[a-z]+/, '')
-        } else {         
+        } 
+        else {         
           // for cases like (3)3 and sin(30)3
           if (prev && prev === ')') {
             throw 'SyntaxError'
